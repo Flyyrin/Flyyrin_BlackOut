@@ -1,5 +1,5 @@
-fx_version 'cerulean'
-games { 'rdr3', 'gta5' }
+fx_version 'adamant'
+games 'gta5'
 
 author 'Flyyrin'
 description 'Allows players to cut out power.'
