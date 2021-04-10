@@ -1,8 +1,8 @@
 text = "Hi"
 
 Locations = {
-	["Dock_Elek_Box"] = {
-		position = { x = -736.28, y = -1505.79, z = 5.0 },
+	["PowerPlant_Tank"] = {
+		position = { x = 2747.54, y = 1573.05, z = 50.69 },
 	},
 	["loc2"] = {
 		position = { x = 1961.24, y = 3749.46, z = 32.34 },
@@ -16,10 +16,10 @@ Citizen.CreateThread(function()
         local E_key = 38
         local player = GetPlayerPed(-1)
         local playerLoc = GetEntityCoords(player)
-        local loc = Locations["Dock_Elek_Box"].position
+        local loc = Locations["PowerPlant_Tank"].position
         Citizen.Wait(1)
         if CheckPos(playerLoc.x, playerLoc.y, playerLoc.z, loc.x, loc.y, loc.z, 2) then 
-            helpMessage("Press ~INPUT_PICKUP~ to Disable the power.")
+            helpMessage("Press ~INPUT_PICKUP~ to Togle power switch.")
             if IsControlJustReleased(1, E_key) then
                 notify("Power Disabled.")
             end
