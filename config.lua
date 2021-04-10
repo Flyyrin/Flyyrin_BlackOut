@@ -1,7 +1,7 @@
 Config = {}
 
-Config.vSync = true
-Config.Enable_Debug = true
+Config.vSync = false
+Config.Enable_Debug = false
 
 Config.Locations = {
     ["PowerPlant_Tank"] = {
