@@ -6,9 +6,15 @@ description 'Allows players to cut out power.'
 version '1.0.0'
 
 client_scripts {
-    'client.lua',
+    'client/main.lua',
+    'client/functions.lua',
 }
 
 server_script {
     'server.lua',
+    '@vSync/vs_server.lua'
+}
+
+shared_script {
+    'config.lua',
 }
