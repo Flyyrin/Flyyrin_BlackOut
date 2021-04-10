@@ -12,7 +12,7 @@ client_scripts {
 
 server_script {
     'server.lua',
-    '@vSync/vs_server.lua'
+    '@vSync-Flyyrin_BlackOut/vs_server.lua'
 }
 
 shared_script {
