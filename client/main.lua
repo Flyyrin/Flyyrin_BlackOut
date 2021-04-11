@@ -80,9 +80,9 @@ end)
 AddEventHandler('flyyrin:blackout_message', function(state)
     local active = state
     if active then
-        message_player("Power off")
+        message_player("We are currently experiencing power outages, We will try to fix the problem ASAP!")
     else
-        message_player("Power on")
+        message_player("We fixed the problem and the power should turn back on soon.")
     end
 end)
 
