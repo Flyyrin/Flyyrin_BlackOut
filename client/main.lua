@@ -80,11 +80,9 @@ end)
 AddEventHandler('flyyrin:blackout_message', function(state)
     local active = state
     if active then
-        --Sound power off
-        notify("PRE power off")
+        message_player("Power off")
     else
-        --Sound power on
-        notify("PRE power on")
+        message_player("Power on")
     end
 end)
 
