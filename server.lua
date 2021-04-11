@@ -57,12 +57,28 @@ AddEventHandler("flyyrin:togle_blackout", function(player)
         if Config.Enable_Debug then
             print("^1[Debug]^3: ^3Blackout set to: " .. tostring(blackout) .. " By: " .. player .. ".")
         end
-            TriggerClientEvent('flyyrin:blackout_active', -1, '')
+        if Config.Sounds then
+            TriggerClientEvent('flyyrin:blackout_sound', -1, true)
+        end
+        Wait(2000)
+        TriggerClientEvent('flyyrin:blackout_active', -1, '')
+        Wait(10000)    
+        if Config.messages then    
+            TriggerClientEvent('flyyrin:blackout_message', -1, true)   
+        end 
     else
         if Config.Enable_Debug then
             print("^1[Debug]^3: ^3Blackout set to: " .. tostring(blackout) .. " By: " .. player .. ".")
         end
+        if Config.Sounds then
+            TriggerClientEvent('flyyrin:blackout_sound', -1, false)
+        end
+        Wait(2000)
         TriggerClientEvent('flyyrin:blackout_not_active', -1, '')
+        Wait(10000)
+        if Config.messages then    
+            TriggerClientEvent('flyyrin:blackout_message', -1, false)
+        end    
     end
 end)
 

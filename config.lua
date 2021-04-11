@@ -2,6 +2,8 @@ Config = {}
 
 Config.vSync = false
 Config.Enable_Debug = false
+Config.Sounds = true
+Config.messages = true
 
 Config.Locations = {
     ["PowerPlant_Tank"] = {

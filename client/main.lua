@@ -22,6 +22,10 @@ end)
 RegisterNetEvent('flyyrin:message')
 RegisterNetEvent('flyyrin:blackout_active')
 RegisterNetEvent('flyyrin:blackout_not_active')
+RegisterNetEvent('flyyrin:blackout_sound')
+RegisterNetEvent('flyyrin:blackout_message')
+
+
 
 AddEventHandler('playerSpawned', function()
     if not Config.vSync then
@@ -64,5 +68,23 @@ AddEventHandler('flyyrin:blackout_not_active', function()
     end
 end)
 
+AddEventHandler('flyyrin:blackout_sound', function(state)
+    local active = state
+    if active then
+        PlayMissionCompleteAudio("DEAD")
+    else
+        PlayMissionCompleteAudio("TREVOR_SMALL_01")
+    end
+end)
 
+AddEventHandler('flyyrin:blackout_message', function(state)
+    local active = state
+    if active then
+        --Sound power off
+        notify("PRE power off")
+    else
+        --Sound power on
+        notify("PRE power on")
+    end
+end)
 

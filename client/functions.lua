@@ -26,3 +26,5 @@ function CheckPos(x, y, z, cx, cy, cz, radius)
 
     return (t12 + t21 + t31) <= radius^2
 end
+
+
